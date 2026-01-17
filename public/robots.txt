@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.ludvigkalberg.com/sitemap-index.xml
