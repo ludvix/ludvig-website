@@ -7,26 +7,41 @@
 body, html {
   height: 100%;
   font-family: 'Courier New', Courier, monospace;
-  background-color: #00ecec; 
   color: #000;
   line-height: 1.5;
 }
 
 #background {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: repeating-linear-gradient(
-    45deg,
-    #ff00ff 0px,
-    #ff00ff 4px,
-    #ffff00 4px,
-    #ffff00 8px
-  );
-  opacity: 0.1;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(45deg, #ff00ff, #00ecec, #ffcc00, #ff007f);
+  background-size: 400% 400%;
+  animation: gradientMove 20s ease infinite;
   z-index: -1;
+}
+
+section, header, footer, .box, .feature {
+  position: relative;
+  z-index: 0;
+}
+
+#background::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: repeating-linear-gradient(
+    rgba(255,0,255,0.05) 0 2px,
+    transparent 2px 4px
+  );
+  pointer-events: none;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 #container {
@@ -124,6 +139,18 @@ footer {
   padding: 1rem;
   border-top: 3px solid #ff00ff;
   box-shadow: 0 -4px #00ff00;
+}
+
+#thankyou-message {
+  display: none;            
+  color: #ff00ff;            
+  border: 2px solid #ff00ff;   
+  border-radius: 4px;         
+  padding: 1rem;            
+  text-align: center;          
+  margin-top: 1rem;            
+  background-color: rgba(255, 0, 255, 0.1);
+  box-shadow: 2px 2px #ff00ff; 
 }
 
 @media screen and (max-width: 768px) {
