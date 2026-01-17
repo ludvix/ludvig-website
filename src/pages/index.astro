@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 ---
 <Layout>
+    <div id="background"></div> <!-- animated background -->
+
   <section id="hero">
     <h1>Hello, I’m Ludvig Kalberg!</h1>
     <h2>Welcome to my website</h2>
@@ -59,12 +61,48 @@ import Layout from '../layouts/Layout.astro';
 
 
   <!-- Contact / Social Section -->
-  <section id="contact" class="box" style="margin-top: 3rem; text-align: center;">
-    <h2>Get in Touch</h2>
-    <p>Contact info here:</p>
-    <div id="links" style="justify-content: center;">
-      <a href="mailto:a@a.com" class="primary">Email Me</a>
-      <a href="https://github.com/ludvix" class="secondary">GitHub</a>
-    </div>
-  </section>
+<section id="contact" class="box" style="margin-top: 3rem; text-align: center;">
+  <h2>Get in Touch</h2>
+  <p>Have a question or just want to say hi? Send me a message!</p>
+
+  <!-- Contact Form -->
+  <div style="max-width:400px; margin:0 auto; text-align:left;">
+    <form id="contact-form" action="https://formspree.io/f/xlgggkgl" method="POST">
+    <label for="email">Your Email:</label>
+    <input 
+      type="email" 
+      name="email" 
+      id="email" 
+      placeholder="your@email.com" 
+      required
+      style="width:100%; padding:0.5rem; margin-bottom:0.5rem;"
+    />
+
+    <label for="message">Message:</label>
+    <textarea 
+      name="message" 
+      id="message" 
+      placeholder="Your message here..." 
+      required
+      style="width:100%; padding:0.5rem; margin-bottom:0.5rem;"
+    ></textarea>
+
+    <input type="hidden" name="_next" value="https://www.ludvigkalberg.com/thank-you">
+
+    <button type="submit" class="primary" style="width:100%;">Send</button>
+  </form>
+
+  <div id="thankyou-message" style="display:none; color:rgb(247, 0, 255); text-align:center; margin-top:1rem;">
+      Thanks for reaching out! I’ll get back to you soon.
+  </div>
+</div>
+
+
+  <!-- GitHub Link -->
+  <a href="https://github.com/ludvix" class="secondary" 
+     style="display:block; margin-top:1rem; text-align:center;">
+    GitHub
+  </a>
+</section>
+<script type="module" src="/contact-form.js"></script>
 </Layout>
