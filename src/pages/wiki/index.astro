@@ -1,0 +1,28 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout>
+  <div id="background"></div>
+
+  <!-- Intro Section -->
+  <section class="box" style="margin-top: 3rem; text-align: center; padding: 1rem 2rem;">
+  <h1>Welcome to my IT Wiki</h1>
+  <p>
+    Here you’ll find guides, explanations, and tips about tech in a simple way that’s easy to understand.
+    Click a topic below to start learning!
+  </p>
+  </section>
+
+  <!-- Wiki Topics Section -->
+  <section class="box" style="margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+    <!-- Windows Server with Proxmox -->
+    <div class="feature" style="flex: 1 1 250px; max-width:300px; text-align:center;">
+      <img src="/images/wiki/windows-icon.png" style="width:80px; margin-bottom:0.5rem;">
+      <h3>Windows Server with Proxmox</h3>
+      <p>Learn how to set up a Windows Server in a virtual environment step by step.</p>
+      <a href="/wiki/windows-server" class="primary">Go to Guide</a>
+    </div>
+    
+  </section>
+</Layout>
