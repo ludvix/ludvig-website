@@ -1,0 +1,50 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout>
+  <section id="hero">
+    <h1>Hello, I’m Ludvig Kalberg!</h1>
+    <h2>Welcome to my website</h2>
+    <p>I’m a .</p>
+    <div id="links">
+      <a href="#projects" class="primary">See My Projects</a>
+      <a href="#contact" class="secondary">Contact Me</a>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="box" style="margin-top: 3rem; text-align: center;">
+    <h2>About Me</h2>
+    <p>I .</p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="box" style="margin-top: 3rem; display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center;">
+    <div class="feature">
+      <h2>Project 1 Header</h2>
+      <p>Project 1 Paragraph.</p>
+      <a href="/projects/project1" class="primary">View Project</a>
+    </div>
+    <div class="feature">
+      <h2>Project 2 Header</h2>
+      <p>Project 2 Paragraph.</p>
+      <a href="/projects/project2" class="primary">View Project</a>
+    </div>
+	<div class="feature">
+      <h2>Project 3 Header</h2>
+      <p>Project 3 Paragraph.</p>
+      <a href="/projects/project3" class="primary">View Project</a>
+    </div>
+
+  </section>
+
+  <!-- Contact / Social Section -->
+  <section id="contact" class="box" style="margin-top: 3rem; text-align: center;">
+    <h2>Get in Touch</h2>
+    <p>Contact info here:</p>
+    <div id="links" style="justify-content: center;">
+      <a href="mailto:a@a.com" class="primary">Email Me</a>
+      <a href="https://github.com/ludvix" class="secondary">GitHub</a>
+    </div>
+  </section>
+</Layout>

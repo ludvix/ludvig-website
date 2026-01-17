@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #00ecec; 
+  color: #000;
+  line-height: 1.5;
+}
+
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    45deg,
+    #ff00ff 0px,
+    #ff00ff 4px,
+    #ffff00 4px,
+    #ffff00 8px
+  );
+  opacity: 0.1;
+  z-index: -1;
+}
+
+#container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+header {
+  border: 4px double #ff00ff;
+  padding: 1rem 2rem;
+  background-color: #00ff00;
+  text-align: center;
+  margin-bottom: 2rem;
+  box-shadow: 5px 5px 0 #ff00ff;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: #ff0000;
+  text-shadow: 2px 2px #0000ff;
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+p {
+  font-size: 1rem;
+  color: #000;
+  max-width: 600px;
+  border: 2px solid #ff00ff;
+  padding: 1rem;
+  background-color: #ffffaa;
+  box-shadow: 4px 4px #ff00ff;
+}
+
+#links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+#links a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  color: #00ffff;
+  background-color: #ff00ff;
+  border: 3px solid #ffff00;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-shadow: 3px 3px #0000ff;
+  transition: transform 0.1s;
+}
+
+#links a:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px #0000ff;
+  color: #ffff00;
+}
+
+.box, .feature {
+  background-color: #ffcc00;
+  border: 3px solid #ff00ff;
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 5px 5px #00ff00;
+  flex: 1 1 250px;
+}
+
+code {
+  font-family: 'Courier New', monospace;
+  background-color: #000;
+  color: #0f0;
+  padding: 0.25rem 0.5rem;
+  border: 2px solid #0f0;
+  border-radius: 4px;
+}
+
+footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #0000ff;
+  background-color: #ffcc00;
+  padding: 1rem;
+  border-top: 3px solid #ff00ff;
+  box-shadow: 0 -4px #00ff00;
+}
+
+@media screen and (max-width: 768px) {
+  header h1 { font-size: 2rem; }
+  p { font-size: 0.9rem; }
+  #links { flex-direction: column; }
+  .box, .feature { width: 100%; margin: 0.5rem 0; }
+}

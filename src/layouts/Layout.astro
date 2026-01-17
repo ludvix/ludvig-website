@@ -1,0 +1,26 @@
+---
+import '../styles/global.css';
+---
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludvig Kalberg</title>
+
+    <meta
+      name="description"
+      content="Website of Ludvig Kalberg. Interests include servers, networking, virtualization, learning programming, TV series, and bouldering."
+    />
+
+    <link rel="stylesheet" href="/src/styles/global.css">
+  </head>
+  <body>
+    <div id="background"></div>
+    <div id="container">
+      <slot />
+    </div>
+    <footer>
+      <p>Footer</p>
+    </footer>
+  </body>
+</html>
